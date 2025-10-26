@@ -1,3 +1,17 @@
+name: Hello Agile
+
+on:
+  push:
+    branches: [ dev ]   # Trigger when code is pushed to 'dev'
+  pull_request:
+    branches: [ main ]  # Trigger when a PR targets 'main'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions!"
 # Updated workflow for Exercise 2
 
 name: Hello Agile
